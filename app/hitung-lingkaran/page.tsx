@@ -1,25 +1,52 @@
 import { Button } from "@/components/ui/button";
-
+import { Input } from "@/components/ui/input";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Field,
+  FieldDescription,
+  FieldError,
+  FieldGroup,
+  FieldLabel,
+} from "@/components/ui/field";
+import { Separator } from "@/components/ui/separator";
 const Page = () => {
   return (
-    <div className="flex flex-col space-y-4">
-      <div className="p-4 text-2xl font-bold text-white border-2 border-amber-50 rounded-lg bg-gray-500 ">
-        Pemrograman Website - Pertemuan 3
-      </div>
-      <div className="border-2 border-b-gray-400 rounded-lg p-4">
-        <h1 className="text-xl font-bold">Kalkulasi Lingkaran</h1>
-        <div className="flex flex-row gap-3 items-center pl-3">
-          <p className="mt-2 mb-2">Berapa Radius Lingkaran?</p>
-          <input
-            type="number"
-            placeholder="Masukkan radius lingkaran"
-            className="border-2 border-gray-300 rounded-lg p-2 w-full"
-          />
-        </div>
-        <Button className="rounded-lg bg-gray-500 text-white hover:bg-gray-400">
-          Hitung LUAS dan KELILING Lingkaran
-        </Button>
-      </div>
+    <div className="flex justify-center items-center min-h-screen">
+      <Card className="w-2/3">
+        <CardHeader>
+          <CardTitle>Kalkulasi Lingkaran</CardTitle>
+          <CardDescription>Hitung luas dan keliling lingkaran</CardDescription>
+        </CardHeader>
+        <Separator />
+        <CardContent>
+          <FieldGroup>
+            <Field>
+              <FieldLabel>Radius Lingkaran</FieldLabel>
+              <Input />
+              <FieldDescription>
+                Masukkan nilai radius lingkaran dalam satuan meter
+              </FieldDescription>
+              <FieldError>
+                Radius Lingkaran harus berupa angka positif.
+              </FieldError>
+            </Field>
+          </FieldGroup>
+        </CardContent>
+        <Separator />
+        <CardFooter className="flex gap-2">
+          <Button className="rounded-lg">Reset</Button>
+          <Button variant="outline" className="rounded-lg">
+            Hitung Luas dan Keliling
+          </Button>
+        </CardFooter>
+      </Card>
     </div>
   );
 };
