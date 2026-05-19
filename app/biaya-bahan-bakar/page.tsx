@@ -16,7 +16,10 @@ import {
   FieldGroup,
   FieldLabel,
 } from "@/components/ui/field";
+<<<<<<< ours
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+=======
+>>>>>>> theirs
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { useForm } from "@tanstack/react-form";
@@ -66,11 +69,19 @@ const BiayaBahanBakar = () => {
   });
 
   return (
+<<<<<<< ours
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       <Card className="max-w-md w-full bg-gradient-to-br from-white to-gray-50 shadow-xl hover:shadow-2xl transition-shadow duration-300 rounded-xl p-6">
         <CardHeader>
           <CardTitle>Kalkulasi Biaya Bahan Bakar</CardTitle>
           <CardDescription className="text-gray-600">
+=======
+    <div className="flex justify-center items-center min-h-screen bg-white">
+      <Card className="max-w-md w-full bg-white shadow-lg rounded-xl p-6">
+        <CardHeader>
+          <CardTitle>Kalkulasi Biaya Bahan Bakar</CardTitle>
+          <CardDescription>
+>>>>>>> theirs
             Hitung biaya perjalanan berdasarkan pemakaian bahan bakar, jarak
             tempuh, dan harga per liter
           </CardDescription>
@@ -83,7 +94,10 @@ const BiayaBahanBakar = () => {
               e.preventDefault();
               form.handleSubmit();
             }}
+<<<<<<< ours
             className="space-y-4"
+=======
+>>>>>>> theirs
           >
             <FieldGroup>
               <form.Field name="pemakaian">
@@ -103,10 +117,17 @@ const BiayaBahanBakar = () => {
                         onChange={(e) => field.handleChange(e.target.value)}
                         aria-invalid={isInvalid}
                         placeholder="Masukkan pemakaian bahan bakar per km"
+<<<<<<< ours
                         className="rounded-lg border-gray-300 focus:border-gray-500 focus:ring-1 focus:ring-gray-300"
                         autoComplete="off"
                       />
                       <FieldDescription className="text-gray-600">
+=======
+                        className="rounded-lg"
+                        autoComplete="off"
+                      />
+                      <FieldDescription>
+>>>>>>> theirs
                         Contoh: 0.1 berarti 1 liter untuk 10 km
                       </FieldDescription>
                       {isInvalid && (
@@ -135,10 +156,17 @@ const BiayaBahanBakar = () => {
                         onChange={(e) => field.handleChange(e.target.value)}
                         aria-invalid={isInvalid}
                         placeholder="Masukkan jarak tempuh perjalanan"
+<<<<<<< ours
                         className="rounded-lg border-gray-300 focus:border-gray-500 focus:ring-1 focus:ring-gray-300"
                         autoComplete="off"
                       />
                       <FieldDescription className="text-gray-600">
+=======
+                        className="rounded-lg"
+                        autoComplete="off"
+                      />
+                      <FieldDescription>
+>>>>>>> theirs
                         Contoh: 150 berarti perjalanan sejauh 150 km
                       </FieldDescription>
                       {isInvalid && (
@@ -167,10 +195,17 @@ const BiayaBahanBakar = () => {
                         onChange={(e) => field.handleChange(e.target.value)}
                         aria-invalid={isInvalid}
                         placeholder="Masukkan harga bahan bakar per liter"
+<<<<<<< ours
                         className="rounded-lg border-gray-300 focus:border-gray-500 focus:ring-1 focus:ring-gray-300"
                         autoComplete="off"
                       />
                       <FieldDescription className="text-gray-600">
+=======
+                        className="rounded-lg"
+                        autoComplete="off"
+                      />
+                      <FieldDescription>
+>>>>>>> theirs
                         Contoh: 15000 berarti harga bahan bakar per liter adalah
                         Rp 15.000
                       </FieldDescription>
@@ -189,6 +224,7 @@ const BiayaBahanBakar = () => {
         <Separator />
         {sdhDihitung && biaya !== null && (
           <>
+<<<<<<< ours
             <Alert
               variant="default"
               className="px-6 py-3 rounded-lg bg-red-50 border-red-200 text-red-700"
@@ -211,6 +247,24 @@ const BiayaBahanBakar = () => {
         )}
         <Separator />
         <CardFooter className="flex justify-between mt-4">
+=======
+            <div className="px-6 text-orange-700 rounded-lg">
+              <h1 className="font-semibold mb-3">
+                Hasil Kalkulasi Biaya Bahan Bakar
+              </h1>
+              <p>
+                Biaya Bahan Bakar: Rp{" "}
+                {biaya.toLocaleString("id-ID", {
+                  minimumFractionDigits: 0,
+                  maximumFractionDigits: 0,
+                })}{" "}
+              </p>
+            </div>
+          </>
+        )}
+        <Separator />
+        <CardFooter className="flex gap-2">
+>>>>>>> theirs
           <Button
             type="button"
             onClick={() => {
@@ -218,8 +272,12 @@ const BiayaBahanBakar = () => {
               setSdhDihitung(false);
               setBiaya(null);
             }}
+<<<<<<< ours
             className="rounded-lg border-gray-300 text-gray-700 hover:bg-gray-100"
             variant="outline"
+=======
+            className="rounded-lg"
+>>>>>>> theirs
           >
             Reset
           </Button>
@@ -227,7 +285,11 @@ const BiayaBahanBakar = () => {
             type="submit"
             form="biaya-bahan-bakar-form"
             variant="outline"
+<<<<<<< ours
             className="rounded-lg bg-gray-600 text-white shadow-md hover:shadow-lg transition-shadow duration-200 hover:bg-gray-700 hover:text-white"
+=======
+            className="rounded-lg"
+>>>>>>> theirs
           >
             Hitung Biaya
           </Button>
